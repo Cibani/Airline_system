@@ -1,7 +1,109 @@
-body { font-family: Arial; background: #f0f0f0; padding: 20px; }
-.container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 5px; }
-form { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
-input, button { padding: 10px; border: 1px solid #ccc; border-radius: 3px; }
-button { background: #007bff; color: white; cursor: pointer; }
-.flight { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 3px; }
-#message { color: green; margin: 10px 0; }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+.header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Main Container */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Booking Card */
+.booking-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 380px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+.booking-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4facfe;
+  outline: none;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
